@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title BucketList
+
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css"}
+    %script{src:"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"}
+          
+
+  %body
+    %script{:async => "async", :src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560b1c5e0934f3da"}
+    = render 'layouts/navbar'
+    .container
+      = yield
